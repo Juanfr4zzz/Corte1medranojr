@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Tránsito para Motos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glowing-container">
+        <header>
+            <h1><i class="fas fa-space-shuttle"></i> Encuesta de Tránsito para Motos</h1>
+            <p>Evalúa tu cumplimiento de las normas actuales con esta interfaz interactiva.</p>
+        </header>
+
+        <main>
+            <form id="encuestaForm">
+                <section>
+                    <h2><i class="fas fa-microchip"></i> Documentación y Seguridad</h2>
+                    <div class="pregunta">
+                        <label><i class="fas fa-fingerprint"></i> ¿Porta licencia de conducción vigente?</label>
+                        <div class="opciones">
+                            <input type="radio" id="licenciaSi" name="licencia" value="si" required>
+                            <label for="licenciaSi"><i class="fas fa-check-double"></i> Sí</label>
+                            <input type="radio" id="licenciaNo" name="licencia" value="no">
+                            <label for="licenciaNo"><i class="fas fa-exclamation-triangle"></i> No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta">
+                        <label><i class="fas fa-satellite-dish"></i> ¿Tiene el SOAT al día?</label>
+                        <div class="opciones">
+                            <input type="radio" id="soatSi" name="soat" value="si" required>
+                            <label for="soatSi"><i class="fas fa-check-double"></i> Sí</label>
+                            <input type="radio" id="soatNo" name="soat" value="no">
+                            <label for="soatNo"><i class="fas fa-exclamation-triangle"></i> No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta">
+                        <label><i class="fas fa-robot"></i> ¿Usa casco certificado?</label>
+                        <div class="opciones">
+                            <input type="radio" id="cascoSi" name="casco" value="si" required>
+                            <label for="cascoSi"><i class="fas fa-check-double"></i> Sí</label>
+                            <input type="radio" id="cascoNo" name="casco" value="no">
+                            <label for="cascoNo"><i class="fas fa-exclamation-triangle"></i> No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta">
+                        <label><i class="fas fa-ethernet"></i> ¿Usa chaleco reflectivo?</label>
+                        <div class="opciones">
+                            <input type="radio" id="chalecoSi" name="chaleco" value="si" required>
+                            <label for="chalecoSi"><i class="fas fa-check-double"></i> Sí</label>
+                            <input type="radio" id="chalecoNo" name="chaleco" value="no">
+                            <label for="chalecoNo"><i class="fas fa-exclamation-triangle"></i> No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta">
+                        <label><i class="fas fa-cogs"></i> ¿Realiza revisión técnico-mecánica al día?</label>
+                        <div class="opciones">
+                            <input type="radio" id="tecnomecanicaSi" name="tecnomecanica" value="si" required>
+                            <label for="tecnomecanicaSi"><i class="fas fa-check-double"></i> Sí</label>
+                            <input type="radio" id="tecnomecanicaNo" name="tecnomecanica" value="no">
+                            <label for="tecnomecanicaNo"><i class="fas fa-exclamation-triangle"></i> No</label>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2><i class="fas fa-satellite"></i> Normas de Tránsito</h2>
+                    <div class="pregunta">
+                        <label><i class="fas fa-traffic-light"></i> ¿Respeta los semáforos y señales de tránsito?</label>
+                        <div class="opciones">
+                            <input type="radio" id="semaforosSi" name="semaforos" value="si" required>
+                            <label for="semaforosSi"><i class="fas fa-check-double"></i> Sí</label>
+                            <input type="radio" id="semaforosNo" name="semaforos" value="no">
+                            <label for="semaforosNo"><i class="fas fa-exclamation-triangle"></i> No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta">
+                        <label><i class="fas fa-route"></i> ¿Circula por el carril permitido?</label>
+                        <div class="opciones">
+                            <input type="radio" id="carrilSi" name="carril" value="si" required>
+                            <label for="carrilSi"><i class="fas fa-check-double"></i> Sí</label>
+                            <input type="radio" id="carrilNo" name="carril" value="no">
+                            <label for="carrilNo"><i class="fas fa-exclamation-triangle"></i> No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta">
+                        <label><i class="fas fa-project-diagram"></i> ¿Evita adelantar en zonas prohibidas?</label>
+                        <div class="opciones">
+                            <input type="radio" id="adelantarSi" name="adelantar" value="si" required>
+                            <label for="adelantarSi"><i class="fas fa-check-double"></i> Sí</label>
+                            <input type="radio" id="adelantarNo" name="adelantar" value="no">
+                            <label for="adelantarNo"><i class="fas fa-exclamation-triangle"></i> No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta">
+                        <label><i class="fas fa-digital-tachograph"></i> ¿Respeta los límites de velocidad?</label>
+                        <div class="opciones">
+                            <input type="radio" id="velocidadSi" name="velocidad" value="si" required>
+                            <label for="velocidadSi"><i class="fas fa-check-double"></i> Sí</label>
+                            <input type="radio" id="velocidadNo" name="velocidad" value="no">
+                            <label for="velocidadNo"><i class="fas fa-exclamation-triangle"></i> No</label>
+                        </div>
+                    </div>
+                     <div class="pregunta">
+                        <label><i class="fas fa-headset"></i> ¿No usa el celular mientras conduce?</label>
+                        <div class="opciones">
+                            <input type="radio" id="telefonoSi" name="telefono" value="si" required>
+                            <label for="telefonoSi"><i class="fas fa-check-double"></i> Sí</label>
+                            <input type="radio" id="telefonoNo" name="telefono" value="no">
+                            <label for="telefonoNo"><i class="fas fa-exclamation-triangle"></i> No</label>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2><i class="fas fa-brain"></i> Conciencia y Respeto</h2>
+                     <div class="pregunta">
+                        <label><i class="fas fa-eye"></i> ¿Está atento al entorno y a otros usuarios de la vía?</label>
+                        <div class="opciones">
+                            <input type="radio" id="entornoSi" name="entorno" value="si" required>
+                            <label for="entornoSi"><i class="fas fa-check-double"></i> Sí</label>
+                            <input type="radio" id="entornoNo" name="entorno" value="no">
+                            <label for="entornoNo"><i class="fas fa-exclamation-triangle"></i> No</label>
+                        </div>
+                    </div>
+                    <div class="pregunta">
+                        <label><i class="fas fa-handshake"></i> ¿Respeta a los peatones y ciclistas?</label>
+                        <div class="opciones">
+                            <input type="radio" id="peatonesSi" name="peatones" value="si" required>
+                            <label for="peatonesSi"><i class="fas fa-check-double"></i> Sí</label>
+                            <input type="radio" id="peatonesNo" name="peatones" value="no">
+                            <label for="peatonesNo"><i class="fas fa-exclamation-triangle"></i> No</label>
+                        </div>
+                    </div>
+                </section>
+
+                <button type="submit"><i class="fas fa-rocket"></i> Evaluar Ahora</button>
+            </form>
+
+            <div id="resultado" class="oculto">
+                <h2><i class="fas fa-signal"></i> Resultado de la Evaluación</h2>
+                <div id="mensajeResultado"></div>
+                <div id="multaResultado"></div>
+                <div id="consejosAdicionales" class="oculto">
+                    <h3><i class="fas fa-info-circle"></i> Consejos de Seguridad Adicionales</h3>
+                    <ul>
+                        <li><i class="fas fa-exclamation-circle"></i> Revise periódicamente los frenos, luces y neumáticos de su moto.</li>
+                        <li><i class="fas fa-exclamation-circle"></i> Mantenga una distancia segura de otros vehículos.</li>
+                        <li><i class="fas fa-exclamation-circle"></i> Evite conducir bajo los efectos del alcohol o drogas.</li>
+                        <li><i class="fas fa-exclamation-circle"></i> Planifique su ruta y evite distracciones mientras conduce.</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 Encuesta de Tránsito - Todos los derechos reservados. <a href="#">Términos de Uso</a></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

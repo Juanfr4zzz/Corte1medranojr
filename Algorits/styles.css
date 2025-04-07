@@ -1,0 +1,352 @@
+/* Estilos generales */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(ellipse at center, #0a2b4f 0%, #020b16 100%); /* Fondo espacial */
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+}
+
+/* Estilos para el contenedor brillante */
+.glowing-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Ocupa al menos toda la altura de la pantalla */
+    overflow: auto; /* Permite el scroll si el contenido es más grande */
+}
+
+/* Animación de estrellas */
+.glowing-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPg0KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4NCiAgICAgIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiPg0KICAgICAgICAgPHhtcDpNb2RpZmllZERhdGU+MjAxNi0wOS0wNlQxMzo1MDo1MC0wNzowMDwveG1wOk1vZGlmaWVkRGF0ZT4NCiAgICAgICAgIDx4bXA6Q3JlYXRlRGF0ZT4yMDE2LTA5LTA2VDEzOjUwOjUwLTA3OjAwPC94bXA6Q3JlYXRlRGF0ZT4NCiAgICAgICAgIDx4bXA6TWV0YWRhdGFEZXN0aW5ndWlzaGVyPkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1IChXaW5kb3dzKTwveG1wOk1ldGFkYXRhRGVzdGluZ3Vpc2hlcj4NCiAgICAgICAgIDx4cDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgMjAxNSAoV2luZG93cyk8L3hzcDpDcmVhdG9yVG9vbD4NCiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPg0KICAgPC9yZGY6UkRGPg0KPC94OnhtcG1ldGE+DQogPD94cGFja2V0IGVuZD0idyI/Pgt6crQAAABISURBVHjaYvj//z8DNQABhQEBswABjEgOwABiDgOQAAxNwIAARiQAwABih4EAAQwAAH/v37QAmwAwAB8P79wAYGAMAAwj+/gABiAQYAA4g4QBMAwIMAD8wF8YwY1tAAAAAElFTkSuQmCC') repeat;
+    animation: stars 10s linear infinite;
+    opacity: 0.5;
+    z-index: -1;
+    pointer-events: none; /* Permite la interacción con el contenido */
+}
+
+@keyframes stars {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+header {
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 30px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1s ease-out; /* Animación de entrada */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    padding: 40px;
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: visible; /* Permite el contenido sobresalir si es necesario */
+    animation: slideIn 1s ease-out; /* Animación de desplazamiento */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+section {
+    margin-bottom: 50px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición al hover */
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+h1, h2 {
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra de texto más pronunciada */
+    animation: rgbShift 5s linear infinite; /* Animación RGB */
+}
+
+.pregunta {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    animation: pulseText 2s infinite alternate; /* Animación de pulso */
+}
+
+@keyframes pulseText {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.opciones {
+    display: flex;
+    align-items: center;
+    animation: fadeIn 0.5s ease-out forwards; /* Animación de entrada */
+    opacity: 0;
+}
+
+.opciones:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.opciones:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.opciones:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+input[type="radio"] {
+    margin-right: 15px;
+    margin-left: 25px;
+    transform: scale(1.4);
+    transition: transform 0.3s ease;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.7)); /* Sombra debajo del radio button */
+}
+
+input[type="radio"]:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+input[type="radio"] + label {
+    margin-left: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    transition: color 0.3s ease;
+}
+
+input[type="radio"] + label:hover {
+    color: #ddd;
+}
+
+button {
+    background: linear-gradient(to right, #4f86c6, #79a7d3); /* Degradado de botón */
+    color: #fff;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+    animation: pulseButton 2s infinite alternate; /* Animación de pulso */
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes pulseButton {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Estilos para el resultado */
+#resultado {
+    margin-top: 50px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    animation: expandResult 0.5s ease-out forwards; /* Animación de expansión */
+    transform-origin: top center;
+    opacity: 0;
+}
+
+@keyframes expandResult {
+    from {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    to {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+.oculto {
+    display: none;
+}
+
+/* Estilos específicos para el mensaje y la multa */
+#mensajeResultado {
+    font-size: 26px;
+    font-weight: bold;
+    color: #5ee47a; /* Verde para mensajes positivos */
+    margin-bottom: 25px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: neonText 1.5s infinite alternate; /* Animación de neón */
+}
+
+@keyframes neonText {
+    from {
+        text-shadow: 0 0 10px #5ee47a, 0 0 20px #5ee47a, 0 0 30px #5ee47a;
+    }
+    to {
+        text-shadow: 0 0 5px #5ee47a, 0 0 10px #5ee47a, 0 0 15px #5ee47a;
+    }
+}
+
+#multaResultado {
+    margin-top: 25px;
+    padding: 25px;
+    border: 1px solid #e74c3c;
+    border-radius: 12px;
+    background: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#multaResultado ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#multaResultado li {
+    margin-bottom: 12px;
+    padding-left: 35px;
+    position: relative;
+}
+
+#multaResultado li:before {
+    content: "\f071";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+}
+
+/* Estilos para los consejos adicionales */
+#consejosAdicionales {
+    margin-top: 40px;
+    padding: 30px;
+    border: 1px solid #3498db;
+    border-radius: 12px;
+    background: rgba(52, 152, 219, 0.2);
+    color: #3498db;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#consejosAdicionales ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#consejosAdicionales li {
+    margin-bottom: 12px;
+    padding-left: 35px;
+    position: relative;
+}
+
+#consejosAdicionales li:before {
+    content: "\f05a";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+    animation: slideUp 1s ease-out; /* Animación de deslizamiento */
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ddd;
+}
+
+/* Animación RGB */
+@keyframes rgbShift {
+    0% {
+        text-shadow: -1px 0 red, 1px 0 blue;
+    }
+    50% {
+        text-shadow: 1px 0 green, -1px 0 purple;
+    }
+    100% {
+        text-shadow: -1px 0 blue, 1px 0 red;
+    }
+}
